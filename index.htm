@@ -167,7 +167,7 @@ $.getJSON(
             },
             borderWidth: 0,
             backgroundColor: 'none',
-            pointFormat: '{point.y}',
+            pointFormat: '{point.x} / {point.y}',
             headerFormat: '',
             shadow: false,
             style: {
@@ -182,7 +182,8 @@ $.getJSON(
             color: Highcharts.getOptions().colors[i],
             fillOpacity: 0.3,
             tooltip: {
-              valueSuffix: ' ' + dataset.unit
+              valueSuffix: ' ' + dataset.unit,
+			  valuePrefix: 'Block '
             }
           }]
         });
