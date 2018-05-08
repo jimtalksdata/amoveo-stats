@@ -122,6 +122,15 @@ $.getJSON(
             spacingTop: 20,
             spacingBottom: 20,
 			zoomType: 'x',
+		    resetZoomButton: {
+				position: {
+					align: 'left',
+					verticalAlign: 'top', 
+					x: 40,
+					y: 52
+				},
+				relativeTo: 'chart'
+		    },
 			events: {
 				load: defaultExtremes
 			}
@@ -152,11 +161,6 @@ $.getJSON(
               text: null
             }
           },
-		  resetZoomButton: {
-            position: {
-				align: 'left'
-			}
-		  },
           tooltip: {
             positioner: function() {
               return {
@@ -167,12 +171,13 @@ $.getJSON(
             },
             borderWidth: 0,
             backgroundColor: 'none',
-            pointFormat: '{point.x} / {point.y}',
+            pointFormat: 'Block {point.x} / {point.y}',
             headerFormat: '',
             shadow: false,
             style: {
               fontSize: '18px'
             },
+			
             valueDecimals: dataset.valueDecimals
           },
           series: [{
@@ -182,8 +187,7 @@ $.getJSON(
             color: Highcharts.getOptions().colors[i],
             fillOpacity: 0.3,
             tooltip: {
-              valueSuffix: ' ' + dataset.unit,
-			  valuePrefix: 'Block '
+              valueSuffix: ' ' + dataset.unit
             }
           }]
         });
