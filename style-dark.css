@@ -1,0 +1,78 @@
+body {
+    background-color: #212121;
+    color: #bbb;
+}
+
+ul {
+    border: none;
+    background-color: #666;
+}
+
+li a {
+    color: #ddd;
+}
+
+rect.highcharts-background {
+    fill: #212121;
+}
+
+path.highcharts-crosshair.highcharts-crosshair-thin.undefined {
+    stroke: #444;
+}
+
+text.highcharts-title {
+    color: #ddd;
+    fill: #ddd;
+}
+
+text {
+    fill: #aaa;
+}
+
+g.highcharts-axis-labels.highcharts-xaxis-labels text {
+    fill: #aaa !important;
+}
+
+g.highcharts-axis-labels.highcharts-yaxis-labels text {
+    fill: #aaa !important;
+}
+
+g.highcharts-grid.highcharts-xaxis-grid path {}
+
+path.highcharts-grid-line {
+    stroke: #555;
+}
+
+path.highcharts-axis-line {
+    stroke: #555;
+}
+
+path.highcharts-tick {
+    stroke: #555;
+}
+
+path.highcharts-tracker {
+}
+
+path.highcharts-graph {
+}
+
+a {
+    color: #eee;
+}
+
+text.highcharts-title {
+    fill: #ddd !important;
+}
+
+g.highcharts-label.highcharts-tooltip.highcharts-color-undefined text {
+    fill: #ddd !important;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background: #111;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
