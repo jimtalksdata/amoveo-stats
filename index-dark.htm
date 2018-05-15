@@ -3,6 +3,7 @@
 <head>
   <title>Amoveo Difficulty</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-dark.css">
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
@@ -10,6 +11,7 @@
 </head>
 
 <body>
+
 <div id="container">
 <ul>
   <li><a class="active" href="#">Home</a></li>
@@ -43,10 +45,10 @@
 		<a href="http://amoveo.noncense.tech/">Amoveo.noncense.tech</a>
 		<a href="http://veopool.pw/">Veopool.pw</a>
 		<a href="https://veo.shit.fish/">Veo.shit.fish</a>
+
 	</div>
    </li>
-   <li><a href="/index-dark.htm">&#9790; Dark Mode</a></li>
-
+   <li><a href="/index.htm">&#9728; Light Mode</a></li>
 </ul>
 <script lang="javascript">
 /*
@@ -80,6 +82,14 @@ $('#container').bind('mousemove touchmove touchstart', function(e) {
     }
   }
 });
+
+// change colors to dark theme
+
+Highcharts.setOptions({
+    colors: ['#058DC7', '#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572',
+             '#FF9655', '#FFF263', '#6AF9C4']
+});
+
 /**
  * Override the reset function, we don't need to hide the tooltips and
  * crosshairs.
@@ -232,7 +242,7 @@ $.getJSON(
 		   }, {
 			type: 'sma',
 			linkedTo: 'nethash',
-			color: '#CCCCCC',
+			color: '#aaa',
 			marker: {
 			   enabled: false
 			},
@@ -242,7 +252,7 @@ $.getJSON(
 		   }, {
 			type: 'sma',
 			linkedTo: 'blocktime',
-			color: '#CCCCCC',
+			color: '#aaa',
 			marker: {
 			   enabled: false
 			},
